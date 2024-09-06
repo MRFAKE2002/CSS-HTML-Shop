@@ -1,0 +1,587 @@
+/* Bnazanin Custom Font */
+@font-face {
+    font-family: BNAZANIN;
+    src: url("../fonts/Bnazanin/BNAZAN.woff2") format("woff2"),
+        url("../fonts/Bnazanin/BNAZAN.eot") format("eot"),
+        url("../fonts/Bnazanin/BNAZAN.otf") format("otf"),
+        url("../fonts/Bnazanin/BNAZAN.TTF") format("truetype"),
+        url("../fonts/Bnazanin/BNAZAN.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: BNAZANINB;
+    src: url("../fonts/Bnazanin/BNAZANB.woff2") format("woff2"),
+        url("../fonts/Bnazanin/BNAZANB.eot") format("eot"),
+        url("../fonts/Bnazanin/BNAZANB.otf") format("otf"),
+        url("../fonts/Bnazanin/BNAZANB.TTF") format("truetype"),
+        url("../fonts/Bnazanin/BNAZANB.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+    color: #333;
+    font-family: BNAZANIN;
+    font-weight: normal;
+}
+
+body {
+    margin: 0;
+    direction: rtl;
+}
+
+.container {
+    width: 100%;
+    padding: 0 50px;
+}
+
+.col-4 {
+    width: 25%;
+    height: auto;
+    float: right;
+    padding: 15px;
+}
+
+.clearfix {
+    /* zamani ke az float right va left estefade kardim halate shenavar pish miad ke baraye dorost shodanesh bayad dakhal 
+    div joda bad az div haye daraye float bayad az in class estefade konim */
+    clear: both;
+}
+
+ul {
+    /* baraye inke oun noghte poshte kalame az beyn bere bayad 'list-style' ro barabar 'none' bezarim */
+    list-style: none;
+    /* baraye inke be surat pishfarz daraye 'padding va margin' hast bayad barabar '0' gharar bedim */
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    /* baraye inke khate abi zir be surat default hast az bein bere bayad 'text-decoration' ra barabar 'none' bezarim */
+    text-decoration: none;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+/* header */
+
+.header {
+    width: 100%;
+    height: 50px;
+    background-color: #fff;
+    box-shadow: 0px 2px 3px #bbb;
+}
+
+/* hamburger menu */
+
+.hamburger-menu {
+    display: none;
+    background-color: transparent;
+    margin: 10px 0;
+    border: 0;
+    outline: none;
+    padding: 0;
+    float: right;
+}
+
+.hamburger-menu img {
+    width: 30px;
+    height: 30px;
+}
+
+/* site main logo */
+
+.shop-logo {
+    /* baraye inke be samt rast ferestade beshe bayad 'float' ra 'right' gharar bedim */
+    float: right;
+}
+
+.shop-logo img {
+    width: 65px;
+    /* zamani ke auto gozashte mishe yani be hamun mizan ke width taghyir kone height ham taghyir bokone */
+    height: auto;
+}
+
+/* page links in navbar */
+
+.header-nav {
+    /* baraye inke be samt rast ferestade beshe bayad 'float' ra 'right' gharar bedim */
+    float: right;
+    margin-right: 10px;
+}
+
+/* yani be farzandan emal mishe na be nave natije */
+.header-nav > li {
+    /* zamani ke bekhaim anasor dar kenar ham va ba ghabeliat tayin arz va tul gharar begirand */
+    display: inline-block;
+    padding: 15px 20px;
+    float: right;
+    position: relative;
+}
+
+.header-nav span {
+    cursor: pointer;
+}
+
+/* dropdown menu near categories */
+
+.dropdown-menu-icon {
+    width: 13px;
+    height: 10px;
+    background: url(../images/logo/dropdown-menu.png) center no-repeat;
+    display: inline-block;
+    background-size: cover;
+    margin-right: 5px;
+    vertical-align: 1px;
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    position: absolute;
+    width: 150px;
+    height: auto;
+    box-shadow: 0px 2px 4px #777;
+    background-color: #fff;
+    /* in yani jash chaghdr bad az ghbliye bashe  */
+    top: 100%;
+    right: 0;
+}
+
+/* migim class dropdown-menu ke dakhael .dropdown ast ro dafualt 'display: none;'*/
+.dropdown .dropdown-menu {
+    display: none;
+}
+
+/* migim class dropdown-menu ke dakhael .dropdown ast ro har vaght hover kardim 'display: block;'*/
+.dropdown:hover .dropdown-menu{
+    display: block;
+}
+
+.dropdown-menu li{
+    font-size: 20px;
+    padding: 10px 20px;
+}
+
+.dropdown-menu li:hover {
+    background-color: #777;
+}
+
+.dropdown-menu li a {
+    /* in kar baes mishe oun 'cursor: pointer;' ke difault tag a hast be surat koli ta ounjayi ke arz dadim ro begire */
+    display: block;
+}
+
+
+/* signup and login button in navbar */
+
+.login-btn {
+    background-color: #0080ff;
+    color: #fff;
+    border: none;
+    padding: 8px 11px;
+    margin: 10px 0;
+    border-radius: 3px;
+    cursor: pointer;
+    /* zamani ke mikhaim click bekonim va doresh khat siah miad bayad 'outline' ro barabar 'none' bazarim */
+    outline: none;
+    float: left;
+}
+
+/* home page intro */
+
+.page-intro {
+    width: 100%;
+    height: auto;
+    background: rgb(4, 223, 255);
+    background: linear-gradient(90deg,
+            rgba(4, 223, 255, 1) 0%,
+            rgba(0, 17, 255, 1) 100%);
+    padding: 50px 0;
+}
+
+/* home page intro for half right side */
+
+.page-intro-right {
+    width: 50%;
+    height: auto;
+    float: right;
+    text-align: right;
+}
+
+/* home page intro for half right side site introduction */
+
+.page-intro-right h1 {
+    color: #fff;
+    font-size: 70px;
+    font-family: BNAZANINB;
+    font-weight: bold;
+}
+
+/* home page intro for half right side buttons */
+
+.page-intro-right-btns {
+    margin: 0 auto;
+    width: 300px;
+}
+
+/* home page intro for half right side each button */
+
+.page-intro-right-btn {
+    /* baraye inke betunim paszamine ra shafaf konim bayad 'background-color' ra barabar 'transparent' gharar bedim */
+    color: #fff;
+    background-color: transparent;
+    width: 120px;
+    float: right;
+    margin-left: 20px;
+    border: 2px solid #fff;
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.page-intro-left {
+    width: 50%;
+    height: auto;
+    float: left;
+}
+
+.page-intro-left img {
+    width: 100%;
+    height: 300px;
+}
+
+/* new products */
+
+.product-boxes h2 {
+    font-family: BNAZANINB;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.product-cart {
+    width: 100%;
+    height: 400px;
+    box-shadow: 0 2px 3px #bbb;
+    background-color: #fff;
+}
+
+.product-cart-picture img {
+    width: 100%;
+    height: 300px;
+}
+
+.product-cart-body-title {
+    float: right;
+    margin: 10px 5px;
+}
+
+.product-cart-body-price {
+    float: left;
+    color: #bbb;
+    margin: 10px 5px;
+    text-decoration-line: line-through;
+}
+
+.product-cart-body-description {
+    float: right;
+    margin: 10px 5px;
+}
+
+.product-cart-body-price-off {
+    float: left;
+    font-family: BNAZANIN;
+    font-weight: normal;
+    margin: 10px 5px;
+}
+
+/* ad images for site */
+
+.ad-images {
+    padding-top: 50px;
+}
+
+.left-ad-image {
+    float: left;
+    width: 25%;
+    height: 300px;
+    padding: 0 10px;
+}
+
+.left-ad-image img {
+    width: 100%;
+    height: 300px;
+}
+
+.right-ad-image {
+    float: right;
+    width: 75%;
+    height: 300px;
+    padding: 0 10px;
+}
+
+.right-ad-image img {
+    width: 100%;
+    height: 300px;
+}
+
+/* most discount products */
+
+.most-off-products {
+    width: 100%;
+    height: auto;
+    background-color: #96cafd;
+}
+
+.most-off-products h2 {
+    font-family: BNAZANINB;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.most-off-product {
+    width: calc(100% / 3);
+    height: auto;
+    float: right;
+    padding: 15px;
+}
+
+.why-us-item {
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+.why-us-item img {
+    width: 100%;
+    height: 300px;
+}
+
+.why-us-item h3 {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.why-us-item p {
+    font-size: 15px;
+}
+
+/* footer */
+
+.footer {
+    background-color: #333;
+    width: 100%;
+    height: auto;
+    margin-top: 40px;
+}
+
+.footer-box-first-last {
+    float: right;
+    width: 30%;
+    height: auto;
+    padding: 15px;
+}
+
+.footer-box-second-third {
+    float: right;
+    width: 20%;
+    height: auto;
+    padding: 15px;
+}
+
+
+.footer-item {
+    width: 100%;
+    height: auto;
+}
+
+.footer-titles {
+    font-weight: bold;
+    font-size: 25px;
+    color: #fff;
+}
+
+.footer-text {
+    color: #fff;
+    font-size:15px
+}
+
+.footer-item ul li {
+    margin: 30px;
+}
+
+.footer-item ul li a {
+    color: #fff;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.footer-item ul li span {
+    color: #fff;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.footer-pictures {
+    height: auto;
+    width: 100%;
+
+}
+
+.footer-pictures img {
+    width: 150px;
+    height: 150px;
+}
+
+
+.footer-line {
+    border-color: #8f8f8f;
+    border-width: 3px;
+}
+
+
+
+.under-footer p {
+    padding: 20px 0;
+    color: #fff;
+    font-size: 20px;
+    float: right;
+}
+
+.media-footer {
+    float: left;
+}
+
+/* responsive */
+
+@media screen and (max-width: 1300px) {
+    .footer-box-first-last {
+        width: 50%;
+    }
+
+    .footer-box-second-third {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .container {
+        padding: 0 100px;
+    }
+
+    .col-4 {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .container {
+        padding: 0 60px;
+    }
+
+    .most-off-product {
+        width: 50%;
+    }
+
+    .page-intro-left img {
+        display: none;
+    }
+
+    .page-intro-right {
+        width: 100%;
+        text-align: center;
+    }
+
+    .page-intro-right h1 { 
+        font-size: 50px;
+    }
+
+    .page-intro-right h1 br { 
+        display: none;
+    }
+
+    .shop-logo {
+        display: none;
+    }
+
+    .header-nav {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: inline-block;
+    }
+}
+
+
+@media screen and (max-width: 800px) {
+    .footer-box-first-last {
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer-box-second-third {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+@media screen and (max-width: 700px) {
+    .container {
+        padding: 0 50px;
+    }
+
+    .col-4 {
+        width: 50%;
+    }
+
+    .most-off-product {
+        width: 100%;
+    }
+
+    .shop-logo {
+        display: none;
+    }
+
+    .header-nav {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: inline-block;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .container {
+        padding: 0 40px;
+    }
+
+    .col-4 {
+        width: 100%;
+    }
+
+    .left-ad-image {
+        display: none;
+    }
+
+    .right-ad-image {
+        width: 100%;
+    }
+
+    .under-footer p {
+        width: 100%;
+        text-align: center;
+    }
+
+    .media-footer {
+        width: 100%;
+        text-align: center;
+    }
+}
