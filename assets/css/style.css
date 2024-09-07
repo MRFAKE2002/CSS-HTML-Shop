@@ -137,7 +137,7 @@ p {
 .dropdown-menu-icon {
     width: 13px;
     height: 10px;
-    background: url(../images/logo/dropdown-menu.png) center no-repeat;
+    background: url(../images/icon/dropdown-menu.png) center no-repeat;
     display: inline-block;
     background-size: cover;
     margin-right: 5px;
@@ -464,12 +464,28 @@ p {
 /* single-page.html */
 
 .breadcrumbs {
-    width: 20px;
-    height: 20px;
-    background-color: #777;
-    
+    background-color: #eee  ;
+    padding: 15px 0;
 }
 
+.breadcrumbs a {
+    color: #777;
+}
+
+.breadcrumbs span {
+    color: #777;
+}
+
+.breadcrumbs a::after {
+    content: '';
+    display: inline-block;
+    background: url(../images/icon/left-arrow.png);
+    width: 15px;
+    height: 15px;
+    margin: 0 8px;
+    /* az in baraye inke bekhaim bala payin bokonim ta dar yek sath gharar begiran */
+    vertical-align: -3px;
+}
 
 
 
