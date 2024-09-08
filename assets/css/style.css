@@ -607,6 +607,56 @@ p {
     cursor: pointer;
 }
 
+.comments h3 {
+    font-weight: bold;
+    padding-top: 20px;
+}
+
+.single-comment {
+    height: auto;
+    background-color: #c4c3c3;
+    padding: 0 20px 20px 20px;
+}
+
+.comment-items {
+    padding: 37px 80px 20px 0;
+    position: relative;
+    height: auto;
+    border-bottom: 2px solid #333;
+}
+
+.comment-items:last-child {
+    border-bottom: none;
+}
+
+.comment-items img {
+    top: 20px;
+    right: 15px;
+    position: absolute;
+}
+
+.comment-items span:first-child {
+    font-weight: bold;
+    font-size: 18px;
+    padding-right: 20px;
+}
+
+.comment-items span:last-child {
+    padding-right: 20px;
+}
+
+.comment-items p {
+    padding-top: 30px;
+}
+
+.good-comment {
+    color: green !important;
+    font-weight: bold;
+}
+
+.bad-comment {
+    color: red !important;
+}
 /* responsive */
 
 @media screen and (max-width: 1300px) {
