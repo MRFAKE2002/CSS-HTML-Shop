@@ -186,7 +186,6 @@ label {
     display: block;
 }
 
-
 /* signup and login button in navbar */
 
 .login-btn {
@@ -403,7 +402,6 @@ label {
     padding: 15px;
 }
 
-
 .footer-item {
     width: 100%;
     height: auto;
@@ -417,7 +415,7 @@ label {
 
 .footer-text {
     color: #fff;
-    font-size: 15px
+    font-size: 15px;
 }
 
 .footer-item ul li {
@@ -439,7 +437,6 @@ label {
 .footer-pictures {
     height: auto;
     width: 100%;
-
 }
 
 .footer-pictures img {
@@ -447,13 +444,10 @@ label {
     height: 150px;
 }
 
-
 .footer-line {
     border-color: #8f8f8f;
     border-width: 3px;
 }
-
-
 
 .under-footer p {
     padding: 20px 0;
@@ -466,9 +460,7 @@ label {
     float: left;
 }
 
-
 /* single-page.html */
-
 
 /* breadcrumbs */
 
@@ -486,7 +478,7 @@ label {
 }
 
 .breadcrumbs a::after {
-    content: '';
+    content: "";
     display: inline-block;
     background: url(../images/icon/left-arrow.png);
     width: 15px;
@@ -495,7 +487,6 @@ label {
     /* az in baraye inke bekhaim bala payin bokonim ta dar yek sath gharar begiran */
     vertical-align: -3px;
 }
-
 
 /* prodcut informations */
 
@@ -602,7 +593,7 @@ label {
 }
 
 .product-info-btn button {
-    background-color: #00BF6F;
+    background-color: #00bf6f;
     border: none;
     font-size: 15px;
     color: #fff;
@@ -657,12 +648,12 @@ label {
     padding-top: 30px;
 }
 
-.good-comment {
+.green-color {
     color: green !important;
     font-weight: bold;
 }
 
-.bad-comment {
+.red-color {
     color: red !important;
 }
 
@@ -730,13 +721,14 @@ label {
     height: auto;
 }
 
-.contact-info h2{
+.contact-info h2 {
     display: block;
     font-weight: bold;
     margin-bottom: 30px;
 }
 
-.contact-row-right address, a {
+.contact-row-right address,
+a {
     font-size: 20px;
     margin-bottom: 20px;
 }
@@ -752,6 +744,195 @@ label {
     width: 100%;
     height: auto;
 }
+
+/* panel.html */
+
+/* panel header */
+
+.main-panel {
+    padding-top: 66px;
+}
+
+.main-panel header {
+    box-shadow: 0px 2px 3px #ccc;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #fff;
+}
+
+.panel-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.panel-header p {
+    padding: 20px 0;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.user-header span {
+    vertical-align: 20px;
+    padding-left: 10px;
+}
+
+.user-header img {
+    width: 50px;
+    height: auto;
+    padding-top: 10px;
+}
+
+.slidebar-panel {
+    position: fixed;
+    width: 240px;
+    height: 100%;
+    top: 66px;
+    right: 0;
+    background-color: #2c2b2b;
+    z-index: 999;
+    /* in baraye zamanie ke age tedad item ha bishtar bud va payin rafte bud bayad betunim scroll konim ke az 'overflow: auto;' estefade mikonim */
+    overflow: auto;
+}
+
+/* panel bodu inputs */
+
+.slidebar-body {
+    padding-right: 250px;
+    width: 100%;
+    height: auto;
+}
+
+.slidebar-body-content {
+    padding: 30px;
+}
+
+.slidebar-body span {
+    font-weight: bold;
+    font-size: 24px;
+    display: block;
+    border-bottom: 2px solid #ccc;
+    padding: 20px 0;
+}
+
+.slidebar-body-input {
+    margin-top: 20px;
+}
+
+.slidebar-body-input label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.slidebar-body-input input[type="text"] {
+    width: 250px;
+    height: 30px;
+    outline: none;
+    border: 3px solid #ccc;
+    border-radius: 5px;
+}
+
+.slidebar-body-button {
+    background-color: #0080ff;
+    outline: none;
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    margin: 15px;
+    cursor: pointer;
+}
+
+/* slidebar panel */
+
+.slidebar-panel-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+}
+
+.slidebar-panel-logo img {
+    width: 170px;
+    height: 170px;
+    border-radius: 100%;
+}
+
+.slidebar-panel-menu {
+    display: flex;
+    padding-right: 30px;
+    padding-top: 50px;
+}
+
+.slidebar-panel-menu ul li {
+    margin: 10px;
+}
+
+.slidebar-panel-menu ul li a {
+    color: #fff;
+    vertical-align: 6px;
+    padding: 5px;
+}
+
+.slidebar-panel-menu ul li i {
+    width: 30px;
+    height: 30px;
+    /* dalile gozashtan in bayad a=vaghti mikhaim aks ro arz va ertefa kam konim va oun icon be dorosti neshun nemide bayad andaze pas zamine ro be surat cover bezarim va baraye 
+    inke emal beshe va size taghyir nakone bayad '!important' bezarim */
+    background-size: cover !important;
+    display: inline-block;
+}
+
+/* slidebar little pabel */
+
+.slidebar-panel-little {
+    position: fixed;
+    width: 100px;
+    height: 100%;
+    top: 66px;
+    right: 0;
+    background-color: #2c2b2b;
+    z-index: 9999;
+    /* in baraye zamanie ke age tedad item ha bishtar bud va payin rafte bud bayad betunim scroll konim ke az 'overflow: auto;' estefade mikonim */
+    overflow: auto;
+    display: none;
+    text-align: center;
+}
+
+.slidebar-panel-little-logo {
+    margin-top: 10px
+}
+
+.slidebar-panel-little-logo img {
+    width: 70px;
+    height: auto;
+    /* in baraye ine ke oun sevidi pas zamine aks ro az bein bebare */
+    mix-blend-mode: color;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.slidebar-panel-little-menu {
+    display: inline-block;
+    padding-top: 20px;
+}
+
+.slidebar-panel-little-menu ul li {
+    margin: 10px;
+    align-content: center;
+}
+
+.slidebar-panel-little-menu ul a li i {
+    width: 40px;
+    height: 40px;
+    /* dalile gozashtan in bayad a=vaghti mikhaim aks ro arz va ertefa kam konim va oun icon be dorosti neshun nemide bayad andaze pas zamine ro be surat cover bezarim va baraye 
+    inke emal beshe va size taghyir nakone bayad '!important' bezarim */
+    background-size: cover !important;
+    display: inline-block;
+}
+
 
 /* responsive */
 
@@ -838,7 +1019,6 @@ label {
     }
 }
 
-
 @media screen and (max-width: 800px) {
     .footer-box-first-last {
         width: 100%;
@@ -850,7 +1030,6 @@ label {
         text-align: center;
     }
 }
-
 
 @media screen and (max-width: 700px) {
     .container {
@@ -884,6 +1063,19 @@ label {
     .contact-input {
         width: 100%;
     }
+
+    .slidebar-panel-little {
+        display: inline-block;
+    }
+
+    .slidebar-panel {
+        display: none;
+    }
+
+    .slidebar-body {
+        padding-right: 100px;
+    }
+
 }
 
 @media screen and (max-width: 500px) {
@@ -921,4 +1113,15 @@ label {
         width: 180px;
     }
 
+    .slidebar-body-input input[type="text"] {
+        width: 185px;
+    }
+    
+    .slidebar-panel-little {
+        width: 70px;
+    }
+
+    .slidebar-body {
+        padding-right: 60px;
+    }
 }
