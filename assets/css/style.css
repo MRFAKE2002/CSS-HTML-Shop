@@ -902,7 +902,7 @@ a {
 }
 
 .slidebar-panel-little-logo {
-    margin-top: 10px
+    margin-top: 10px;
 }
 
 .slidebar-panel-little-logo img {
@@ -933,6 +933,105 @@ a {
     display: inline-block;
 }
 
+/* category.html */
+
+.categories {
+    margin-top: 20px;
+    /* be dalile kenar budan sidebar va content az flex estefade kardim */
+}
+
+.categories-flex {
+    display: flex;
+}
+
+.category-content {
+    width: 75%;
+    height: auto;
+    /* be dalil kenar budan mahsulat ba ham inja az flex estefade kardim */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.category-col-flex {
+    width: calc(100% / 3);
+    padding: 0 10px;
+    margin-bottom: 15px;
+}
+
+.category-sidebar {
+    width: 25%;
+    height: auto;
+    padding: 5px;
+}
+
+.category-sidebar-filters {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 1px 2px 3px #777;
+}
+
+.category-sidebar-filter-box {
+    margin: 0 10px;
+    border-bottom: 2px solid #ccc; 
+}
+
+.category-sidebar-filter-box:last-child {
+    border-bottom: none; 
+}
+
+.category-sidebar-filter-box h2 {
+    font-weight: bold;
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.category-sidebar-filter-box ul li {
+    direction: ltr;
+    margin-bottom: 10px;
+    margin-right: 5px;
+}
+
+.category-sidebar-filter-box ul li label {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+/* pagination */
+
+.pagination {
+    padding-top: 30px;
+    /* baraye inke betunim chand div ra kenare ham gharar bedim bayad be class valedeshun 'display: flex;' bedim va 'flex-wrap: wrap;' bezarim */
+    display: flex;
+    flex-wrap: wrap;
+    /* baraye inke mohtaviat dakhel div az chap va rast biad vasat */
+    justify-content: center;
+    direction: ltr;
+    width: 100%;
+    height: auto;
+}
+
+.pagination-item {
+    box-shadow: 1px 2px 2px #ccc;
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    /* baraye inke betunim mohtaviat dakhel div ra vasat div gharar bedim bayad be khodesh 'display: flex;' bedim va 
+    'justify-content: center;' bezarim ta az chap va rast biad vasat va 'align-items: center;' bezarim ta az bala va payin biad vasat */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+}
+
+.pagination-item-selected {
+    background-color: #0080ff;
+}
+
+.pagination-item-selected span {
+    color: #fff;
+}
 
 /* responsive */
 
@@ -944,9 +1043,7 @@ a {
     .footer-box-second-third {
         width: 50%;
     }
-}
 
-@media screen and (max-width: 1100px) {
     .container {
         padding: 0 100px;
     }
@@ -977,6 +1074,29 @@ a {
 
     .product-info-description p {
         width: 100%;
+    }
+
+    .categories-flex {
+        flex-direction: column;
+    }
+
+    .category-sidebar {
+        width: 100%;
+    }
+
+    .category-content {
+        width: 100%;
+    }
+
+    .category-sidebar-filters {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .category-sidebar-filter-box {
+        width: 50%;
+        border-bottom: none;
+        margin: 0;
     }
 }
 
@@ -1029,6 +1149,10 @@ a {
         width: 100%;
         text-align: center;
     }
+
+    .category-col-flex {
+        width: 50%;
+    }
 }
 
 @media screen and (max-width: 700px) {
@@ -1037,7 +1161,7 @@ a {
     }
 
     .col-4 {
-        width: 50%;
+        width: 100%;
     }
 
     .most-off-product {
@@ -1075,16 +1199,17 @@ a {
     .slidebar-body {
         padding-right: 100px;
     }
+}
 
+@media screen and (max-width: 600px) {
+    .category-col-flex {
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 500px) {
     .container {
-        padding: 0 40px;
-    }
-
-    .col-4 {
-        width: 100%;
+        padding: 0 10px;
     }
 
     .left-ad-image {
@@ -1116,7 +1241,7 @@ a {
     .slidebar-body-input input[type="text"] {
         width: 185px;
     }
-    
+
     .slidebar-panel-little {
         width: 70px;
     }
